@@ -2,10 +2,81 @@
 body {
     font-family: Arial, sans-serif;
 	margin: 0;
-    padding: 0;
+    padding: 0 30px;
     box-sizing: border-box;
     text-align:center;
 }
-#wrap{
+.flex-container-column {
     display: flex;
+    flex-direction: column;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+p{
+    text-align: justify;
+}
+aside h3{
+    margin-top:30px;
+}
+ul{
+    padding: 0;
+    align-self: center;
+    margin-top:0px;
+    margin-bottom:30px;
+}
+nav ul li{
+display: inline;
+}
+ul li{
+    list-style: none;
+}
+main{
+    float:left;
+    display: inline;
+    width: 70%;
+    max-width: 70%;
+}
+
+hr{
+    width:100%;
+    margin: 50px 30px;
+    clear: both;
+}
+aside{
+    float:left;
+    display: inline;
+    width: 30%;
+    max-width: 30%;
+    margin: 50px 0;
+}
+
+aside span{
+    background-color:slateblue;
+    padding:15px;
+    border: 1px solid rgb(89, 74, 185);
+    border-radius: none;
+}
+
+footer {
+    margin-top: 30px;
+}
+footer p{
+    text-align: center;
+}
+
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .flex-container-column {
+        flex-direction: column;
+    }
+    main, aside{
+        width: 100%;
+        max-width:unset;
+    }
+    main{
+        margin: 0;
+    }
 }
